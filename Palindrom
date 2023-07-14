@@ -1,0 +1,50 @@
+package giris;
+import java.sql.SQLOutput;
+import java.util.Scanner;
+public class class3 {
+    static String f(int n) {
+        int ilksayi = n,toplam = 0,sonbasamak;
+        while (ilksayi!=0){
+            sonbasamak = ilksayi % 10;
+            toplam = (toplam * 10) + sonbasamak;
+            ilksayi /= 10;
+
+        } if (toplam == n){
+            String polindrom = n + " sayısı polindrom sayıdır.";
+            return polindrom;
+        }else {
+            String polindromdegil = n + " sayısı polindrom sayı değildir.";
+            return polindromdegil;
+        }
+
+    }
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        System.out.println("Bir sayı giriniz: ");
+        int sayi = input.nextInt();
+        System.out.println(f(sayi));
+
+    }
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
